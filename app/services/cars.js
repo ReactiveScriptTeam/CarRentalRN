@@ -2,7 +2,7 @@ import cars from "../data/cars";
 
 class Cars {
     getCars() {
-        return cars;
+        return cars.cars;
     }
 };
 

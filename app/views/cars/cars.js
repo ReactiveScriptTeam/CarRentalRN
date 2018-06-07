@@ -1,25 +1,44 @@
-import React, {Component} from 'react';
-import {StyleSheet, Text, View, FlatList} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, FlatList, Alert } from 'react-native';
+import CarItem from "./car-item";
+import cars from "../../services/cars"
 
 export default class Cars extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { cars: null };
+    }
+
+    componentDidMount() {
+        this.setState({ cars: cars.getCars() });
+    }
+
+    _onPressItem = (car: Car) => {
+        this.props.navigation.navigate("Details", {
+            id: car.id,
+        });
+    };
+
+    _renderItem = ({item}) => (
+        <CarItem car={item} onPressItem={this._onPressItem} />
+    );
+    
     render() {
-        return (
-            <View style={styles.carsList}>
-                <FlatList
-                    data={[
-                        {key: 'Devin'},
-                        {key: 'Jackson'},
-                        {key: 'James'},
-                        {key: 'Joel'},
-                        {key: 'John'},
-                        {key: 'Jillian'},
-                        {key: 'Jimmy'},
-                        {key: 'Julie'},
-                    ]}
-                    renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-                />
-            </View>
-        );
+        if (this.state.cars) {
+            return (
+                <View style={styles.carsList}>
+                    <FlatList
+                        data={this.state.cars}
+                        keyExtractor={(item, index) => item.id}
+                        renderItem={ this._renderItem }
+                    />
+                </View>
+            );
+        } else {
+            return (<Text> Loading ...</Text>);
+        }
+
     }
 }
 
