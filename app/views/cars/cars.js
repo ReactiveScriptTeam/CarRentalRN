@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, FlatList, Alert } from 'react-native';
 import CarItem from "./car-item";
-import cars from "../../services/cars"
+import cars from "../../services/cars";
 
 export default class Cars extends Component {
 
@@ -33,6 +33,7 @@ export default class Cars extends Component {
                         keyExtractor={(item, index) => item.id}
                         renderItem={ this._renderItem }
                     />
+                    
                 </View>
             );
         } else {

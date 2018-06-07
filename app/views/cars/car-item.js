@@ -2,6 +2,7 @@
 import React, { Component, PureComponent } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { Car } from "../../services/cars";
+import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 const styles = StyleSheet.create({
     image: {
@@ -25,14 +26,15 @@ export default class CarItem extends PureComponent {
                     <Text> {car.name} </Text>
                     <Text> {"€" + car.price + "/day"} </Text>
 
+
                     <Image
                         style={styles.image}
                         source={{ uri: car.imageUrl }}
                     />
-
-                    <Text> {car.hasAC ? "Yes" : "No"} </Text>
-                    <Text> {car.class} </Text>
-                    <Text> {car.transmission} </Text>
+                    
+                    <Text><FontAwesome>{Icons.car}</FontAwesome> {car.class} </Text>
+                    <Text><FontAwesome>{Icons.gears}</FontAwesome> {car.transmission} Transmission</Text>
+                    <Text><FontAwesome>{Icons.snowflakeO}</FontAwesome> {car.hasAC ? "Yes" : "No"} </Text>
                 </View>
             </TouchableOpacity>
         );
