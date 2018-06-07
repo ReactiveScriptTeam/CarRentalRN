@@ -1,20 +1,7 @@
 // @flow
 import React, { Component, PureComponent } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-
-interface Car {
-    class: string,
-    doors: number,
-    hasAC: true,
-    id: string,
-    imageStoragePath: string,
-    imageUrl: string,
-    luggage: number,
-    name: string,
-    price: number,
-    seats: string,
-    transmission: string
-}
+import { Car } from "../../services/cars";
 
 const styles = StyleSheet.create({
     image: {
@@ -23,10 +10,9 @@ const styles = StyleSheet.create({
     }
 });
 
-
 export default class CarItem extends PureComponent {
     _onPress = () => {
-        if(this.props.onPressItem){
+        if (this.props.onPressItem) {
             this.props.onPressItem(this.props.car);
         }
     };
