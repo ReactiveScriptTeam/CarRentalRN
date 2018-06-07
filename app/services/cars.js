@@ -18,6 +18,12 @@ class Cars {
     getCars(): Car[] {
         return cars.cars;
     }
+
+    getCarById(id) {
+        return cars.cars.find((car) => {
+            return car.id === id;
+        });
+    }
 };
 
 export default new Cars();
