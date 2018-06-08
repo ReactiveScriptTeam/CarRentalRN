@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import carsService from "../../services/cars";
 
+
+const ItemRow = ({ label, value }) =>
+    (<View style={styles.container}>
+        <Text style={styles.label}>{label}</Text>
+        <Text style={styles.value}>{value}</Text>
+    </View>);
+
 export default class CarsDetails extends Component {
     static navigationOptions = ({ navigation }) => {
         return { title: navigation.getParam("title", "Car Details") };
@@ -21,30 +28,12 @@ export default class CarsDetails extends Component {
                 <View style={styles.imageContainer}>
                     <Image source={image} style={styles.car} />
                 </View>
-                <View style={styles.container}>
-                    <Text style={styles.label}>Price</Text>
-                    <Text style={styles.value}>€{carDetails.price}/day</Text>
-                </View>
-                <View style={styles.container}>
-                    <Text style={styles.label}>Class</Text>
-                    <Text style={styles.value}>{carDetails.class}</Text>
-                </View>
-                <View style={styles.container}>
-                    <Text style={styles.label}>Doors</Text>
-                    <Text style={styles.value}>{carDetails.doors}</Text>
-                </View>
-                <View style={styles.container}>
-                    <Text style={styles.label}>Seats</Text>
-                    <Text style={styles.value}>{carDetails.seats}</Text>
-                </View>
-                <View style={styles.container}>
-                    <Text style={styles.label}>Teansmission</Text>
-                    <Text style={styles.value}>{carDetails.transmission}</Text>
-                </View>
-                <View style={styles.container}>
-                    <Text style={styles.label}>Luggage</Text>
-                    <Text style={styles.value}>{carDetails.luggage}</Text>
-                </View>
+                <ItemRow label="Price" value={"€" + carDetails.price + "/day"} />
+                <ItemRow label="Class" value={carDetails.class} />
+                <ItemRow label="Doors" value={carDetails.doors} />
+                <ItemRow label="Seats" value={carDetails.seats} />
+                <ItemRow label="Transmission" value={carDetails.transmission} />
+                <ItemRow label="Luggage" value={carDetails.luggage} />
             </ScrollView>
         );
     }
