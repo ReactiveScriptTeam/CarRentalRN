@@ -10,6 +10,12 @@ const RootStack = createStackNavigator(
     },
     {
         initialRouteName: "Cars",
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#586EF5',
+            },
+            headerTintColor: '#fff',
+        }
     }
 );
 
