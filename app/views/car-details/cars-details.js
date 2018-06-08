@@ -13,7 +13,7 @@ export default class CarsDetails extends Component {
 
         const carDetails = carsService.getCarById(itemId);
         const image = {
-            url: carDetails.imageUrl
+            uri: carDetails.imageUrl
         };
 
         return (
