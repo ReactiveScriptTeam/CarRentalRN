@@ -3,6 +3,10 @@ import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import carsService from "../../services/cars";
 
 export default class CarsDetails extends Component {
+    static navigationOptions = ({ navigation }) => {
+        return { title: navigation.getParam("title", "Car Details") };
+    };
+
     render() {
         const { navigation } = this.props;
         const itemId = navigation.getParam("id", "NO-ID");

@@ -19,6 +19,7 @@ export default class Cars extends Component {
     _onPressItem = (car: Car) => {
         this.props.navigation.navigate("Details", {
             id: car.id,
+            title: car.name
         });
     };
 
