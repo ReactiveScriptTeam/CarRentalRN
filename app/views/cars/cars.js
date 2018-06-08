@@ -6,6 +6,7 @@ import cars from "../../services/cars";
 export default class Cars extends Component {
     static navigationOptions = {
         title: 'Browse',
+        headerBackTitle: " "
     };
     constructor(props) {
         super(props);
