@@ -4,7 +4,9 @@ import CarItem from "./car-item";
 import cars from "../../services/cars";
 
 export default class Cars extends Component {
-
+    static navigationOptions = {
+        title: 'Browse',
+    };
     constructor(props) {
         super(props);
         this.state = { cars: null };
@@ -20,10 +22,10 @@ export default class Cars extends Component {
         });
     };
 
-    _renderItem = ({item}) => (
+    _renderItem = ({ item }) => (
         <CarItem car={item} onPressItem={this._onPressItem} />
     );
-    
+
     render() {
         if (this.state.cars) {
             return (
@@ -31,9 +33,9 @@ export default class Cars extends Component {
                     <FlatList
                         data={this.state.cars}
                         keyExtractor={(item, index) => item.id}
-                        renderItem={ this._renderItem }
+                        renderItem={this._renderItem}
                     />
-                    
+
                 </View>
             );
         } else {
