@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import carsService from "../../services/cars";
 
 export default class CarsDetails extends Component {
@@ -13,44 +13,65 @@ export default class CarsDetails extends Component {
         };
 
         return (
-            <View style={{ flex: 1 }}>
-                <View style={{ flex: 1 }}>
-                    <Image source={image} style={{ width: 300, height: 110 }} />
+            <ScrollView style={styles.mainContainer}>
+                <View style={styles.imageContainer}>
+                    <Image source={image} style={styles.car} />
                 </View>
-                <View>
-                    <Text>Price</Text>
-                    <Text>{carDetails.price}/day</Text>
+                <View style={styles.container}>
+                    <Text style={styles.label}>Price</Text>
+                    <Text style={styles.value}>€{carDetails.price}/day</Text>
                 </View>
-                <View>
-                    <Text>Class</Text>
-                    <Text>{carDetails.class}</Text>
+                <View style={styles.container}>
+                    <Text style={styles.label}>Class</Text>
+                    <Text style={styles.value}>{carDetails.class}</Text>
                 </View>
-                <View>
-                    <Text>Doors</Text>
-                    <Text>{carDetails.doors}</Text>
+                <View style={styles.container}>
+                    <Text style={styles.label}>Doors</Text>
+                    <Text style={styles.value}>{carDetails.doors}</Text>
                 </View>
-                <View>
-                    <Text>Seats</Text>
-                    <Text>{carDetails.seats}</Text>
+                <View style={styles.container}>
+                    <Text style={styles.label}>Seats</Text>
+                    <Text style={styles.value}>{carDetails.seats}</Text>
                 </View>
-                <View>
-                    <Text>Teansmission</Text>
-                    <Text>{carDetails.transmission}</Text>
+                <View style={styles.container}>
+                    <Text style={styles.label}>Teansmission</Text>
+                    <Text style={styles.value}>{carDetails.transmission}</Text>
                 </View>
-                <View>
-                    <Text>Luggage</Text>
-                    <Text>{carDetails.luggage}</Text>
+                <View style={styles.container}>
+                    <Text style={styles.label}>Luggage</Text>
+                    <Text style={styles.value}>{carDetails.luggage}</Text>
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    carsList: {
+    mainContainer: {
+        backgroundColor: "white"
+    },
+    imageContainer: {
+        borderBottomWidth: 1,
+        borderColor: "#aaa",
+        marginBottom: 10
+    },
+    container: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
+        alignItems: 'flex-start',
+        flexDirection: 'row',
+        justifyContent: "flex-start",
+        padding: 5
+    },
+    car: {
+        width: "100%",
+        height: 300,
+    },
+    label: {
+        width: "40%",
+        fontSize: 18,
+        color: "#999"
+    },
+    value: {
+        fontSize: 18
     }
 });
