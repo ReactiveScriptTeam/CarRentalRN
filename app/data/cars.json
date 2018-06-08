@@ -145,7 +145,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car12",
       "imageStoragePath" : "images/car6.jpg",
@@ -223,7 +223,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car18",
       "imageStoragePath" : "images/car6.jpg",
@@ -301,7 +301,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car24",
       "imageStoragePath" : "images/car6.jpg",
@@ -457,7 +457,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car36",
       "imageStoragePath" : "images/car6.jpg",
@@ -535,7 +535,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car42",
       "imageStoragePath" : "images/car6.jpg",
@@ -613,7 +613,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car48",
       "imageStoragePath" : "images/car6.jpg",
@@ -691,7 +691,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car54",
       "imageStoragePath" : "images/car6.jpg",
@@ -769,7 +769,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car60",
       "imageStoragePath" : "images/car6.jpg",
@@ -847,7 +847,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car66",
       "imageStoragePath" : "images/car6.jpg",
@@ -925,7 +925,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car72",
       "imageStoragePath" : "images/car6.jpg",
@@ -1003,7 +1003,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car78",
       "imageStoragePath" : "images/car6.jpg",
@@ -1081,7 +1081,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car84",
       "imageStoragePath" : "images/car6.jpg",
@@ -1159,7 +1159,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car90",
       "imageStoragePath" : "images/car6.jpg",
@@ -1237,7 +1237,7 @@
     },
     {
       "class" : "Luxury",
-      "DOORS" : 3,
+      "doors" : 3,
       "hasAC" : false,
       "id" : "car96",
       "imageStoragePath" : "images/car6.jpg",

@@ -46,8 +46,6 @@ export default class Cars extends Component {
 const styles = StyleSheet.create({
     carsList: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#dddddd',
     }
 });
